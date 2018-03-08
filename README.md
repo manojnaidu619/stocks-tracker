@@ -1,1 +1,1 @@
-# A Responsive Stocks-tracker built using Ruby On Rails
+# A Responsive Stocks-tracker built using Ruby On Rails!!
