@@ -1,1 +1,17 @@
-<h1>cool , it's working!!!</h1>
+<div class="container">
+  <div class="container greet">
+    <h2>Lookup stocks here!!!</h2>
+  </div><br>
+  <div class="container">
+    <%= form_tag "#",method: :get do %>
+       <div class="col-lg-6">
+         <div class="input-group">
+           <%= text_field_tag :stock , params[:stock], autocomplete: "off", class: "form-control", placeholder: "Search Stocks.." %>
+           <span class="input-group-btn">
+             <%= submit_tag "Look for stocks" , class:"btn btn-secondary" %>
+           </span>
+         </div>
+       </div>
+    <% end %>
+  </div>
+</div>
