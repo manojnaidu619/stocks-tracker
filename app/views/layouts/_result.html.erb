@@ -1,0 +1,14 @@
+<div class="container">
+  <% if params[:stock].nil? and @stock.nil? %>
+    <h6>Enter a valid stock</h6>
+  <% else %>
+    <div class="container stocks_with_border">
+      <b>NAME:</b> <%= @stock.name %> |
+      <b>SYMBOL:</b> <%= @stock.symbol %> |
+      <b>LAST PRICE:</b> <%= @stock.l %> |
+      <b>EXCHANGE:</b> <%= @stock.exchange %> |
+      <b>HIGH:</b> <%= @stock.hi %> |
+      <b>LOW:</b> <%= @stock.lo %>
+    </div>
+   <% end %>
+</div>

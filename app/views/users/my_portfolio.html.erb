@@ -3,22 +3,18 @@
     <h2>Lookup stocks here!!!</h2>
   </div><br>
   <div class="container">
-    <%= form_tag stocks_search_stocks_path,method: :get do %>
+    <%= form_tag stocks_search_stocks_path,remote: true, method: :get do %>
        <div class="col-lg-6">
          <div class="input-group">
            <%= text_field_tag :stock , params[:stock], autocomplete: "off", class: "form-control", placeholder: "Search Stocks.." %>
            <span class="input-group-btn">
              <%= submit_tag "Look for stocks" , class:"btn btn-secondary" %>
            </span>
-         </div>
+         </div><br>
        </div>
     <% end %><br>
-    <% if !params[:stock].nil? %>
-      <div class="container">
-        <b>SYMBOL:</b> <%= @stocks_symbol %> |
-        <b>NAME:</b> <%= @stocks_name %> |
-        <b>LAST PRICE:</b> <%= @stocks_price %>
-      </div>
-    <% end %>
+    <div id="results">
+      <%= render 'layouts/result' %>
+    </div>
   </div>
 </div>

@@ -1,11 +1,12 @@
 class StocksController < ApplicationController
 
   def search_stocks
-    @stock = StockQuote::Stock.quote(params[:stock])
-    @stocks_name = @stock.name
-    @stocks_symbol = @stock.symbol
-    @stocks_price = @stock.l
-    render 'users/my_portfolio'
-  end
+
+          @stock = StockQuote::Stock.quote(params[:stock])
+          respond_to do |format|
+            format.js {render partial: 'layouts/result'}
+          end
+
+    end
 
 end
