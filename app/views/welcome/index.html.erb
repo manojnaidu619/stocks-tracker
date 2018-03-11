@@ -4,6 +4,7 @@
    <%= link_to "SIGNUP", new_user_registration_path %>
   <%  end %>
   <% if user_signed_in? %>
-   <%= link_to "LOGOUT", destroy_user_session_path, method: :delete %>
+   <%= link_to "LOGOUT", destroy_user_session_path, method: :delete %> |
+   <%= link_to "Search Stocks", users_my_portfolio_path %>
   <%  end %><br>
 </div>
