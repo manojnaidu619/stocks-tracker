@@ -1,0 +1,4 @@
+<% form_for @ajax do |f|%>
+  <%= f.text_area :comment, params[:comment], rows: '10' %>
+  <%= f.submit :submit %>
+<% end %>

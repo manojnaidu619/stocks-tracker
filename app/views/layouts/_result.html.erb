@@ -1,6 +1,6 @@
 <div class="container">
   <% if params[:stock].nil? and @stock.nil? %>
-    <h6>Enter a valid stock</h6>
+    <h6 id="empty_alert">Field should be neither blank nor filled with invalid stock names</h6>
   <% else %>
     <div class="container stocks_with_border">
       <b>NAME:</b> <%= @stock.name %> |
